@@ -13,3 +13,8 @@ ArgoCD Secret
 ```bash
 kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 -d; echo
 ```
+
+Web App
+```bash
+kubectl port-forward -n myapp svc/my-service 8081:8080
+```

@@ -15,5 +15,12 @@ spec:
       containers:
         - name: my-container
           image: nutbodyslam053/rust:latest
+          imagePullPolicy: "IfNotPresent"
           ports:
           - containerPort: 8080
+
+        #   envFrom:
+        # - secretRef:
+        #   name: my-secret
+        # - configMapRef:
+        #   name: my-configmap
